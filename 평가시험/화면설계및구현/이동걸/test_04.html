@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/jquery.js"></script>
+<script>
+$(function(){
+
+$("button").on("mousedown",function(){
+	console.log("down");
+	$(this).css("box-shadow","none")
+});
+
+$("button").on("mouseup",function(){
+	console.log("up");
+	$(this).css("box-shadow","10px 8px 10px 0px rgba(0, 0, 0, 10)")
+});
+
+});
+</script>
+
+<style>
+
+button{
+	cursor:pointer;
+	border-radius:20px 20px;
+	width:100px;
+	height:50px;
+	box-shadow: 10px 8px 10px 0px rgba(0, 0, 0, 10);
+</style>
+
+</head>
+<body>
+
+<button>목록</button>
+<button>가입</button>
+<button>수정</button>
+<button>탈퇴</button>
+
+</body>
+</html>

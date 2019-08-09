@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+table {
+	width: 800px;
+	border-collapse: collapse;
+}
+
+.color {
+	background-color: lightgray;
+}
+
+th {
+	width: 120px;
+	height: 40px;
+	border: solid 1px;
+}
+
+td {
+	width: 120px;
+	height: 40px;
+	border: solid 1px;
+	text-align: center;
+}
+</style>
+</head>
+<body>
+
+	<h1 align="center">이력서</h1>
+	<h2>1. 인적사항</h2>
+	<table>
+		<tr>
+			<th rowspan="2">성명</th>
+			<th>한글</th>
+			<td>최한석</td>
+			<th>생년월일</th>
+			<td>1990.10.27</td>
+			<td rowspan="4"><img src="img.jpg"></td>
+		</tr>
+
+		<tr>
+			<th>영문</th>
+			<td>CHOI HAN SUK</td>
+			<th>홈페이지</th>
+			<td>http://choi.com</td>
+		</tr>
+		<tr>
+			<th>연락처</th>
+			<th>휴대폰</th>
+			<td>010-8282-1234</td>
+			<th>e-mail</th>
+			<td>goodman@gmail.com</td>
+		</tr>
+		<tr>
+			<th>주소</th>
+			<td colspan="4">서울시 서초구 반포대로 275 래미안퍼스티지 2동 2012호</td>
+		</tr>
+	</table>
+	<h2>2. 학력사항</h2>
+	<table>
+		<tr class="color">
+			<th>학교명</th>
+			<th>전공</th>
+			<th>입학일자</th>
+			<th>졸업일자</th>
+			<th>졸업구분</th>
+			<th>소 재 지</th>
+
+		</tr>
+		<tr>
+			<td>파리10대학</td>
+			<td>경제학</td>
+			<td>2005. 3. 3</td>
+			<td>2010. 2. 20</td>
+			<td><form>
+					<input type="radio" name="rad" value="졸업" checked />졸업 <input
+						type="radio" name="rad" value="예정" />예정
+				</form></td>
+			<td>프랑스</td>
+		</tr>
+		<tr>
+			<td>서울대학교</td>
+			<td>국사학</td>
+			<td>2000. 3. 3</td>
+			<td>2005. 2. 25</td>
+			<td><form>
+					<input type="radio" name="rad1" value="졸업" checked />졸업 <input
+						type="radio" name="rad2" value="예정" />예정
+				</form></td>
+			<td>대한민국</td>
+		</tr>
+	</table>
+	<h2>3. 자격사항</h2>
+	<table>
+		<tr class="color">
+			<th>자격증명</th>
+			<th>등급</th>
+			<th>취득일</th>
+			<th>발급기관</th>
+		</tr>
+		<tr>
+			<td>정보처리기사</td>
+			<td>1급</td>
+			<td>2008. 1. 20</td>
+			<td>한국산업인력공단</td>
+		</tr>
+		<tr>
+			<td>OCJP</td>
+			<td></td>
+			<td>2007. 5. 5.</td>
+			<td>ORACLE</td>
+		</tr>
+	</table>
+</body>
+</html>

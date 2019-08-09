@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>평가문항 7번</title>
+
+<style type = "text/css">
+
+input {
+	font-size: 18px; 
+	background-color:transparent;
+	border:0 solid black;
+	text-align:right;
+}
+table, tr, td, th {
+	border-collapse: collapse;
+	border: solid;
+}
+#academic_tab, #qualif_tab {
+	background-color: silver;
+}
+</style>
+</head>
+<body>
+<h1 style="text-align: center">이력서</h1>
+
+<h3>1. 인적사항</h3>
+	<table id = "info" width="1300px" height="600px">
+		<tr>
+			<th rowspan="2">성명</th>
+			<th>한글</th>
+			<td><input type = "text" value = "최한석"></td>
+			<th>생년월일</th>
+			<td><input type = "text" value = "1992.10.27"></td>
+			<td rowspan="4" width="300px"><img src = "https://vignette.wikia.nocookie.net/crayonshinchan/images/f/fe/01.png/revision/latest?cb=20180603064011&path-prefix=ko"></td>
+		</tr>
+		
+		<tr>
+			<th>영문</th>
+			<td><input type = "text" value = "CHOI HAN SUK"></td>
+			<th>홈페이지</th>
+			<td><input type = "text" value = "http://choi.com"></td>
+		</tr>
+		
+		<tr>
+			<th>연락처</th>
+			<th>휴대폰</th>
+			<td><input type = "text" value = "010-8282-1234"></td>
+			<th>e-mail</th>
+			<td><input type = "email" value = "goodman@gmail.com"></td>
+		</tr>
+		
+		<tr>
+			<th>주소</th>
+			<td colspan="4"><input size = "80" type = "text" value = "서울시 서초구 반포대로 275 래미안퍼스티지 2동 2012호"></td>
+		</tr>
+	</table>
+
+<h3>2. 학력사항</h3>
+
+	<table id = "academic" width="1300px" height="300px">
+		<tr id = "academic_tab">
+			<th>학교명</th>
+			<th>전공</th>
+			<th>입학일자</th>
+			<th>졸업일자</th>
+			<th>졸업구분</th>
+			<th>소재지</th>
+		</tr>
+		<tr>
+			<td><input type = "text" value = "파리10대학"></td>
+			<td><input type = "text" value = "경제학"></td>
+			<td><input type = "text" value = "2005.3.3"></td>
+			<td><input type = "text" value = "2010.2.20"></td>
+			<td><input type = "radio" name="졸업_1" value="졸업" checked="checked">졸업<input type = "radio" name="졸업_1" value="예정">예정</td>
+			<td><input type = "text" value = "프랑스"></td>
+		</tr>
+		<tr>
+			<td><input type = "text" value = "서울대학교"></td>
+			<td><input type = "text" value = "국사학"></td>
+			<td><input type = "text" value = "2000.3.3"></td>
+			<td><input type = "text" value = "2005.2.25"></td>
+			<td><input type = "radio" name="졸업_2" value="졸업" checked="checked">졸업<input type = "radio" name="졸업_2" value="예정">예정</td>
+			<td><input type = "text" value = "대한민국"></td>
+		</tr>
+
+	</table>
+<h3>3. 자격사항</h3>
+	<table id = "qualif" width="1300px" height="300px">
+		<tr id = "qualif_tab">
+			<th>자격증명</th>
+			<th>등급</th>
+			<th>취득일</th>
+			<th>발급기관</th>
+		</tr>
+		
+		<tr>
+			<td><input type = "text" value = "정보처리기사"></td>
+			<td><input type = "text" value = "1급"></td>
+			<td><input type = "text" value = "2008.1.20"></td>
+			<td><input type = "text" value = "한국산업인력공단"></td>
+		</tr>
+		
+		<tr>
+			<td><input type = "text" value = "OCJP"></td>
+			<td><input type = "text" value = ""></td>
+			<td><input type = "text" value = "2007.5.5"></td>
+			<td><input type = "text" value = "ORACLE"></td>
+		</tr>
+	</table>
+</body>
+</html>

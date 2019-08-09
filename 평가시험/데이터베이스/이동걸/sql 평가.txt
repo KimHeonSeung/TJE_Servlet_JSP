@@ -1,0 +1,28 @@
+-- 1번 
+select first_name, hire_date
+from emp
+where hire_date like '2013%';
+
+-- 2번
+select first_name
+from emp
+where first_name like '%a%' or first_name like '%e%';
+
+-- 3번
+select first_name, round(months_worked)
+from emp;
+
+-- 4번
+SELECT department_id, job_id, SUM(salary)
+FROM employees
+GROUP BY ROLLUP (department_id, job_id);
+
+-- 5번
+select first_name, department_id, dept_name
+from emp
+where department_id is not null;
+
+-- 6번
+select last_name, salary 
+from employees
+where manager_id = (select employee_id from employees where last_name = 'Kochhar');

@@ -1,0 +1,66 @@
+package khs.model;
+
+import java.util.*;
+
+import khs.dao.SimpleBoardDAO;
+import khs.jdbc.util.ConnectionProvider;
+
+import java.sql.*;
+import java.text.*;
+
+public class Paging {
+	
+	// 페이지 갯수가 몇개 보일지 설정.
+	private final static int pageCount = 5;
+	// 5개가 하나의 블럭이 된다, 즉 1~5가 하나의 블럭, 6~10이 하나의 블럭
+	private int blockStartNum = 0;
+	private int blockLastNum = 0;
+	private int lastPageNum = 0;
+	
+	public int getBlockStartNum() {
+		return blockStartNum;
+	}
+	public void setBlockStartNum(int blockStartNum) {
+		this.blockStartNum = blockStartNum;
+	}
+	public int getBlockLastNum() {
+		return blockLastNum;
+	}
+	public void setBlockLastNum(int blockLastNum) {
+		this.blockLastNum = blockLastNum;
+	}
+	public int getLasgPageNum() {
+		return lasgPageNum;
+	}
+	public void setLasgPageNum(int lasgPageNum) {
+		this.lasgPageNum = lasgPageNum;
+	}
+	
+	// 블럭의 생성. 현재 페이지가 속한 블럭의 시작, 끝 번호를 계산한다.
+	public void makeBlock (int curPage) {
+		int blockNum = 0;
+		// 소숫점이 있다면 버리고 +1을 해줘야 글이 필요한 페이지 갯수가 다 나옴
+		blockNum = (int)Math.floor( (curPage - 1)/pageCount );
+		blockStartNum = (pageCount * blockNum) + 1;
+		blockLastNum = blockStartNum + (pageCount-1);
+	}
+	
+	// 총 페이지의 마지막 번호
+	public void makeLastPageNum( int board_id ) {
+		SimpleBoardDAO sbDAO = new SimpleBoardDAO();
+		int total = 0;
+		try (Connection conn = ConnectionProvider.getConnection()) {
+			total = sbDAO.selectSimpleBoardCount(conn, board_id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		if(total % pageCount == 0) {
+			lastPageNum = (int)Math.floor(total/pageCount);
+		}
+		
+		
+		
+	}
+	
+}
+	

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>목록, 가입, 수정, 탈퇴</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("button").on("mousedown", function () {
+                $(this).css("box-shadow", "0px 0px 0px 0px");
+            });
+            $("button").on("mouseup", function () {
+                $(this).css("box-shadow", "4px 4px 8px 4px");
+            });
+        });
+    </script>
+    <style>
+        table {
+            border-spacing: 10px;
+        }
+
+        button {
+            padding: 5px;
+            width: 80px;
+            height: 40px;
+            text-align: center;
+            border-radius: 30px;
+            background-color: lightgray;
+            box-shadow: 4px 4px 8px 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td><button><b>목록</b></button></td>
+            <td><button><b>가입</b></button></a></td>
+            <td><button><b>수정</b></button></a></td>
+            <td><button><b>탈퇴</b></button></a></td>
+        </tr>
+
+    </table>
+</body>
+
+</html>

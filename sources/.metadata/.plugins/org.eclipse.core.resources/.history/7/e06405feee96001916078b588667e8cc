@@ -1,0 +1,40 @@
+package khs.command;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import java.util.*;
+import java.sql.*;
+
+import khs.dao.SimpleBoardDAO;
+import khs.jdbc.util.*;
+import khs.model.*;
+import khs.service.*;
+
+public class PagingCommand extends Command {
+	private String formPage = "/WEB-INF/forms/paging.jsp";
+	private String submitPage = "/WEB-INF/submits/paging.jsp";
+	private String errorPage = "/WEB-INF/errors/paging.jsp";
+
+	private SimpleBoardDAO sbDAO = new SimpleBoardDAO();
+
+	protected String processForm(HttpServletRequest request, HttpServletResponse response) {
+		int board_id = 1;
+		int total = 0;
+		try (Connection conn = ConnectionProvider.getConnection()) {
+			total = sbDAO.selectSimpleBoardCount(conn, board_id);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		return formPage;
+	}
+
+	// POST 요청일 경우의 처리 로직을 구현하는 메소드
+	protected String processSubmit(HttpServletRequest request, HttpServletResponse response) {
+		return null;
+	}
+
+}

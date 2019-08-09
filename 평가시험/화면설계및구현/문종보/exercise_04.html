@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>평가문항4</title>
+
+<script src="js/jquery.js"></script>
+<script>
+$(function() {
+	
+	$("#btn_1").on("mousedown", function() {
+		$("#btn_1").css("box-shadow", "0px 0px 0px 0px black");
+	});	
+	$("#btn_1").on("mouseup", function() {
+		$("#btn_1").css("box-shadow", "5px 5px 10px 10px black");
+	});
+	
+	$("#btn_2").on("mousedown", function() {
+		$("#btn_2").css("box-shadow", "0px 0px 0px 0px black");
+	});	
+	$("#btn_2").on("mouseup", function() {
+		$("#btn_2").css("box-shadow", "5px 5px 10px 10px black");
+	});
+	
+	$("#btn_3").on("mousedown", function() {
+		$("#btn_3").css("box-shadow", "0px 0px 0px 0px black");
+	});	
+	$("#btn_3").on("mouseup", function() {
+		$("#btn_3").css("box-shadow", "5px 5px 10px 10px black");
+	});
+	
+	$("#btn_4").on("mousedown", function() {
+		$("#btn_4").css("box-shadow", "0px 0px 0px 0px black");
+	});	
+	$("#btn_4").on("mouseup", function() {
+		$("#btn_4").css("box-shadow", "5px 5px 10px 10px black");
+	});
+	
+});
+</script>
+<style type="text/css">
+
+.btn{
+	display:inline;
+	float:left;
+	border-radius:25px;
+	background:#BDBDBD;
+	width:100px;
+	height:50px;
+	margin:10px 10px;
+	padding:15px;
+	box-shadow:5px 5px 10px 10px black;
+	}
+
+</style>
+</head>
+<body>
+<input type="button" class="btn" id="btn_1" value="목록">
+<input type="button" class="btn" id="btn_2" value="가입">
+<input type="button" class="btn" id="btn_3" value="수정">
+<input type="button" class="btn" id="btn_4" value="탈퇴">
+</body>
+</html>

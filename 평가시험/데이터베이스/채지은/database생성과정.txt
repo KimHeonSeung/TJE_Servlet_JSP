@@ -1,0 +1,39 @@
+
+1.DB생성
+1단계) 기존 데이터베이스의 백업 및 데이터베이스 spec 결정
+data file,contro file, parameter file,redo log file을 backup해야한다
+2단계)새로운 환경설정의 파일 설정
+오라클 설치시의 sid로 file명이 결정된다
+인스턴스를 시작할 때, 이 파라미터 파일에서 오라클 데이터베이스 환경과 관련된 사항들을 참조하여 인스턴스를 가동 
+3단계) 생성한 파라미터 파일의 수정
+4단계) 데이터베이스 시작과 종료
+-데이터베이스의 생성
+데이터베이스를 nomount로 시작, pfile로 참조할 file을 지정
+svrmgr>startup nomount pfile=e:xxx\initxxx.ora
+
+
+	SVRMGR> connect internal
+	연결되었습니다
+	SVRMGR> startup nomount
+	ORACLE 인스턴스가 시작되었습니다
+	시스템 글로벌 영역                          4554000 바이트 합계
+	Fixed Size                                          48400 바이트
+	Variable Size                                     4227072 바이트
+	Database Buffers                                   204800 바이트
+	Redo Buffers                                        73728 바이트
+
+테이터베이스생성
+	SVRMGR> create database test
+	2> maxinstances 8
+	3> maxlogfiles 32
+	4> character set "KO16KSC5601"
+	5> national character set "KO16KSC5601"
+	6> datafile
+	7> '/usr/local/Oracle/oradata/test/system01.dbf' size 80m
+	8> logfile
+	9> '/usr/local/Oracle/oradata/test/redotest01.log' size 500k,
+	10> '/usr/local/Oracle/oradata/test/redotest02.log' size 500k,
+	11> '/usr/local/Oracle/oradata/test/redotest03.log' size 500k;
+
+컨트롤 파일의 추가
+로그파일의 추가

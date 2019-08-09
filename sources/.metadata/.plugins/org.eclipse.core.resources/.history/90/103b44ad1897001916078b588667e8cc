@@ -1,0 +1,123 @@
+package khs.command;
+
+import java.io.IOException;
+import java.sql.Connection;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import khs.jdbc.util.*;
+import khs.model.*;
+import khs.service.*;
+import java.util.*;
+
+public class MainCommand extends Command {
+	private String formPage = "/WEB-INF/forms/main.jsp";
+	private String submitPage = "/WEB-INF/submits/main.jsp";
+	private String errorPage = null;
+
+	private Board_InfoService biService = new Board_InfoService();
+	private EverySimpleBoardService esbService = new EverySimpleBoardService();
+	private BoardAndCommentService bacService = new BoardAndCommentService();
+	private SimpleBoardService sbService = new SimpleBoardService();
+	
+	protected String processForm(HttpServletRequest request, HttpServletResponse response) {
+		Integer board_id = null;
+		String board_name = null;
+		
+		Integer article_num = null;
+		
+		
+		try (Connection conn = ConnectionProvider.getConnection()) {
+
+			HashMap<String, Object> values = new HashMap<>();
+			values.put("conn", conn);
+			
+			HashMap<String, Object> resultMap = biService.service(values);
+			
+			// 모든 게시판의 정보(board_id, board_name)를 갖는 ArrayList 반환
+			ArrayList<Board_Info> boardList = (ArrayList<Board_Info>)resultMap.get("boardList");
+			
+			HashMap<Integer, ArrayList<SimpleBoards>> everyRecentBoard = new HashMap<Integer, ArrayList<SimpleBoards>>();
+			HashMap<Integer, HashMap<Integer, Object>> boardAndCommentCount = new HashMap<Integer, HashMap<Integer, Object>>();
+			
+			// 리스트에서 하나씩 뽑아서 board_id를 가져오고 이를 기반으로 각 게시판마다 최신 5개글을 가져온다.
+			for(Board_Info bi : boardList) {
+				board_id = bi.getBoard_id();
+				values.put("board_id", board_id);
+				// EverySimpleBoardService 재활용 위해 page를 1로 설정
+				values.put("page", 1);
+				
+				resultMap = esbService.service(values);
+				// board_id에 해당하는 상위 5개의 게시글을 리스트 형태로 받아온다.
+				ArrayList<SimpleBoards> thisBoardList = (ArrayList<SimpleBoards>)resultMap.get("thisBoardList");
+				
+				everyRecentBoard.put(board_id, thisBoardList);
+				
+				resultMap = sbService.service(values);
+				
+				ArrayList<SimpleBoard> simpleBoard = (ArrayList<SimpleBoard>) resultMap.get("simpleBoard");
+				
+				values.put("simpleBoard", simpleBoard);
+				values.put("type", "articleComment");
+				HashMap<String, Object> articleNumAndCommentResultMap = bacService.service(values);
+				
+				request.setAttribute("articleNumAndCommentMap", articleNumAndCommentResultMap.get("articleNumAndCommentMap"));
+				
+			}
+			
+			request.setAttribute("boardList", boardList);
+			request.setAttribute("everyRecentBoard", everyRecentBoard);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+//		게시판 리스트를 전부 가져와야 한다.
+//		board_id 1,2,3,4,5 ......
+//		board id에 해당하는 top 5개글을 가져와야 한다.
+	
+		
+		
+		return formPage;
+	}
+		
+		
+		
+		
+//		try (Connection conn = ConnectionProvider.getConnection()) {
+//			HashMap<String, Object> values = new HashMap<>();
+//			values.put("conn", conn);
+//			HashMap<String, Object> resultMap = alService.service(values);
+//
+//			request.setAttribute("articleCount", resultMap.get("articleCount"));
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//		return formPage;
+	
+	
+	
+	
+	
+	
+	protected String processSubmit(HttpServletRequest request, HttpServletResponse response) {
+		return submitPage;
+	}
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

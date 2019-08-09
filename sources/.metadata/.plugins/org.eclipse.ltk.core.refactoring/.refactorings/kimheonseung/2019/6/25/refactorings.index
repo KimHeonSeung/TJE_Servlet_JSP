@@ -1,0 +1,88 @@
+1560837845253	Rename resource 'ㅓㄴ'
+1560838124758	Delete elements
+1560838143449	Delete elements
+1560838152079	Rename package 'tje.command'
+1560838156567	Rename package 'tje.controller'
+1560838163670	Rename package 'tje.jdbc.listener'
+1560838170985	Rename package 'tje.jdbc.util'
+1560838357596	Rename package 'tje.service'
+1560838362994	Rename package 'tje.util'
+1560843396872	Rename package 'khs.DAO'
+1560843462026	Rename type 'MemberDAO'
+1560843477267	Rename type 'Member'
+1560845489369	Rename type 'MemberIDCheckService'
+1560845496810	Rename type 'MemberUpdateService'
+1560848408662	Copy file
+1560848472191	Rename type 'MainCommand'
+1560848954103	Copy compilation unit
+1560904085167	Copy compilation unit
+1560905687806	Rename resource 'start.jsp'
+1560905720030	Delete element
+1560907867722	Copy compilation unit
+1560909019829	Copy compilation unit
+1560910613336	Rename type 'RegistCheckCommand'
+1560910645309	Copy compilation unit
+1560917946909	Copy compilation unit
+1560922237664	Copy file
+1560922592038	Copy file
+1560926593328	Copy compilation unit
+1560926751826	Copy compilation unit
+1560926841750	Copy compilation unit
+1560926943451	Rename type 'Board'
+1560926952522	Rename type 'BoardDAO'
+1560927020513	Copy compilation unit
+1560927028939	Rename type 'BoardCommand'
+1560934202912	Copy compilation unit
+1560934256439	Copy file
+1560934312536	Copy compilation unit
+1560996574154	Delete element
+1560996585797	Copy compilation unit
+1560997148207	Copy compilation unit
+1560997710202	Copy compilation unit
+1560997717446	Rename type '_BoardDAO'
+1560997726747	Rename resource 'article_list.jsp'
+1560997768106	Rename type 'ArticleCommand'
+1560998536686	Rename type 'DetailBoardCommand'
+1560998576226	Copy compilation unit
+1560998667472	Copy compilation unit
+1560998700855	Rename type 'Simple_BoardDAO'
+1560998720752	Copy compilation unit
+1560999004299	Rename resource 'detail_board.jsp'
+1561000643001	Copy file
+1561000707990	Copy compilation unit
+1561000816094	Copy compilation unit
+1561000822548	Rename type 'BoardService'
+1561000855971	Copy compilation unit
+1561001132770	Rename type 'Detail_BoardDAO'
+1561003083098	Delete element
+1561003469964	Copy compilation unit
+1561004382380	Copy file
+1561010587718	Copy compilation unit
+1561011471600	Copy file
+1561014449512	Copy compilation unit
+1561077829557	Copy compilation unit
+1561078367709	Copy compilation unit
+1561079005304	Copy compilation unit
+1561079043046	Copy compilation unit
+1561079991342	Copy compilation unit
+1561086772657	Copy compilation unit
+1561090258317	Copy files
+1561090261101	Delete element
+1561090264854	Copy folders
+1561090268904	Delete element
+1561097366876	Copy folders
+1561097371179	Delete elements
+1561097375548	Delete elements
+1561100610952	Copy compilation unit
+1561101016117	Copy file
+1561103077210	Copy file
+1561103154562	Copy compilation unit
+1561105275528	Rename resource 'user_info.jsp'
+1561105279466	Copy file
+1561105284368	Rename resource 'user_info1.jsp'
+1561105290739	Copy file
+1561105294848	Delete element
+1561105300745	Rename resource 'user_info1.jsp'
+1561105717102	Copy compilation unit
+1561106286171	Copy file
+1561107122055	Copy file

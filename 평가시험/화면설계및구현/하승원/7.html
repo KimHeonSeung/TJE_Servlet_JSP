@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이력서</title>
+
+<style type="text/css">
+
+	form{
+		width : 800px;
+	}
+
+	table{
+		width : 800px;
+		border : 1px solid;
+		padding : 30px;
+		border-collapse: collapse;
+	}
+	th, td {
+		border : 1px solid;
+		padding : 10px;
+		border-collapse: collapse;
+		text-align: center;
+	}
+	
+	.sub {
+		height: 30px;
+	}
+	
+	.sub_top{
+		background-color: lightgray
+	}
+	
+
+</style>
+
+</head>
+<body>
+<form>
+<h1 align="center">이 력 서</h1>
+<h3>1.인적사항</h3>
+<table>
+
+	<tr>
+		<th rowspan="2">성명</th>
+		<th>한글</th>
+		<td>최한석</td>
+		<th>생년월일</th>
+		<td>1990.10.27</td>
+		<th rowspan="4" width="100px"><img alt="image" src="./sum.png"> </th>
+	</tr>
+	<tr>
+		<th>영문</th>
+		<td>CHOI HAN SUK</td>
+		<th>홈페이지</th>
+		<td>http://choi.com</td>
+	</tr>
+	<tr>
+		<th>연락처</th>
+		<th>휴대폰</th>
+		<td>010-8282-1234</td>
+		<th>e-mail</th>
+		<td>goodman@gmail.com</td>
+	</tr>
+	<tr>
+		<th>주소</th>
+		<td colspan="4">서울시 서초구 반포대로 275 래미안퍼스티지 2동 2012호</td>
+	</tr>	
+		
+</table>
+
+<h3>2.학력사항</h3>
+<table class="sub">
+	<tr class="sub_top">
+		<th>학교명</th>
+		<th>전공</th>
+		<th>입학일자</th>
+		<th>졸업일자</th>
+		<th>졸업구분</th>
+		<th>소재지</th>
+	</tr>
+	<tr>
+		<td>파리10대학</td>
+		<td>경제학</td>
+		<td>2005.3.3</td>
+		<td>2010.2.20</td>
+		<td><label><input type="radio" name="ra1" checked="checked">졸업</label><label><input type="radio" name="ra1">예정</label></td>
+		<td>프랑스</td>
+	</tr>
+	<tr>
+		<td>서울대학교</td>
+		<td>국사학</td>
+		<td>2000.3.3</td>
+		<td>2005.2.25</td>
+		<td><label><input type="radio" name="ra2" checked="checked">졸업</label><label><input type="radio" name="ra2">예정</label></td>
+		<td>대한민국</td>
+	</tr>
+</table>
+
+<h3>3.자격사항</h3>
+<table class="sub">
+	<tr class="sub_top">
+		<th>자격증명</th>
+		<th>등급</th>
+		<th>취득일</th>
+		<th>발급기관</th>
+	</tr>
+	<tr>
+		<td>정보처리기사</td>
+		<td>1급</td>
+		<td>2008.1.20</td>
+		<td>한국산업인력관리공단</td>
+	</tr>
+	<tr>
+		<td>OCJP</td>
+		<td> </td>
+		<td>2007.5.5</td>
+		<td>ORACLE</td>
+	</tr>
+
+</table>
+</form>
+</body>
+</html>

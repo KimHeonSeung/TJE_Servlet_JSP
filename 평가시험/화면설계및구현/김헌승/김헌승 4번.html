@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>평가문항 4번</title>
+
+<style type="text/css">
+button {
+	cursor: pointer; 
+	width: 100px;
+	height: 60px;
+	border-radius: 80px;
+	background-color: lightgray;
+}
+b {
+	text-align: center;
+}
+</style>
+<script src="js/jquery.js"></script>
+<script type="text/javascript">
+$(function() {
+	$(".list").on(
+			{	"mousedown" : function() {$(".list").attr("style", "#")},
+				"mouseup" : function() {$(".list").attr("style", "box-shadow: 5px 5px 5px black");}
+			});
+	$(".in").on(
+			{	"mousedown" : function() {$(".in").attr("style", "#");},
+				"mouseup" : function() {$(".in").attr("style", "box-shadow: 5px 5px 5px black");}
+			});
+	$(".ch").on(
+			{	"mousedown" : function() {$(".ch").attr("style", "#");},
+				"mouseup" : function() {$(".ch").attr("style", "box-shadow: 5px 5px 5px black");}
+			});
+	$(".out").on(
+			{	"mousedown" : function() {$(".out").attr("style", "#");},
+				"mouseup" : function() {$(".out").attr("style", "box-shadow: 5px 5px 5px black");}
+			});
+});
+</script>
+</head>
+<body>
+
+<button class = "list" style="box-shadow: 5px 5px 5px black"><b>목록</b></button>
+<button class = "in" style="box-shadow: 5px 5px 5px black"><b>가입</b></button>
+<button class = "ch" style="box-shadow: 5px 5px 5px black"><b>수정</b></button>
+<button class = "out" style="box-shadow: 5px 5px 5px black"><b>탈퇴</b></button>
+
+</body>
+</html>

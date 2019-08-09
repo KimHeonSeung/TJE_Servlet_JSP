@@ -1,0 +1,5 @@
+1. 데이터베이스 생성(database configuration assistant) 캡쳐 참고
+
+2.
+- DB ( 테이블 스페이스 ) 생성
+- 사용자 생성 ( 1에서 만들어 놓은 DB를 지정 )

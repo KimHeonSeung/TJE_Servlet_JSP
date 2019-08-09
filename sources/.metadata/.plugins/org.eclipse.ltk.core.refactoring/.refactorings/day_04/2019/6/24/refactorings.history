@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;CookieManager.java&apos; to &apos;day_13/src/tje.util&apos;&#x0D;&#x0A;- Original project: &apos;day_04&apos;&#x0D;&#x0A;- Destination element: &apos;day_13/src/tje.util&apos;&#x0D;&#x0A;- Original element: &apos;tje.servlet.cookie.CookieManager.java&apos;" description="Copy compilation unit" destination="=day_13/src&lt;tje.util" element1="/src&lt;tje.servlet.cookie{CookieManager.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1560388747512" units="1" version="1.0"/>
+</session>

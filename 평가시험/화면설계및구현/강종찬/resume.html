@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>이력서</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+    </script>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        button {
+            padding: 5px;
+            width: 80px;
+            height: 40px;
+            text-align: center;
+            border-radius: 30px;
+            background-color: lightgray;
+            box-shadow: 4px 4px 8px 4px;
+            cursor: pointer;
+        }
+
+        tr,
+        td {
+            text-align: center;
+
+            height: 40px;
+            border: 1px solid;
+        }
+
+        tr #col1 {
+            width: 100px;
+        }
+
+        tr #col2 {
+            width: 80px;
+        }
+
+        tr #col3 {
+            width: 200px;
+        }
+
+        tr #col4 {
+            width: 80px;
+        }
+
+        tr #col5 {
+            width: 200px;
+        }
+
+        tr #col6 {
+            width: 150px;
+        }
+
+        th {
+            border: 1px solid;
+            background-color: beige
+        }
+
+        .aTable th:nth-child(1) {
+            width: 140px;
+        }
+
+        .aTable th:nth-child(2) {
+            width: 110px;
+        }
+
+        .aTable th:nth-child(3) {
+            width: 120px;
+        }
+
+        .aTable th:nth-child(4) {
+            width: 120px;
+        }
+
+        .aTable th:nth-child(5) {
+            width: 170px;
+        }
+
+        .aTable th:nth-child(6) {
+            width: 150px;
+        }
+        .cTable th:nth-child(1){
+            width: 250px;
+        }
+        .cTable th:nth-child(2){
+            width: 100px;
+        }
+        .cTable th:nth-child(3){
+            width: 220px;
+        }
+        .cTable th:nth-child(4){
+            width: 250px;
+        }
+        .pTable img{
+            width:150px;
+            height: 180px;
+        }
+
+        .personal{
+            width:1920px;
+            height: 1080px;
+            padding: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>이력서</h1>
+    </div>
+    <div class="personal">
+        <h2>1. 인적사항</h2>
+        <div class="pTable">
+            <table>
+                <tr>
+                    <td rowspan="2" id="col1"><b>성명</b></td>
+                    <td id="col2"><b>한글</b></td>
+                    <td id="col3">최한석</td>
+                    <td id="col4"><b>생년월일</b></td>
+                    <td id="col5">1990.10.27</td>
+                    <td rowspan="4" id="col6"><img src="resume.jpg"></td>
+                </tr>
+                <tr>
+
+                    <td><b>영문</b></td>
+                    <td>CHOI HAN SUK</td>
+                    <td><b>홈페이지</b></td>
+                    <td>http://choi.com</td>
+                </tr>
+                <tr>
+                    <td><b>연락처</b></td>
+                    <td><b>휴대폰</b></td>
+                    <td>010-8282-1234</td>
+                    <td><b>E-Mail</b></td>
+                    <td>goodman@gmail.com</td>
+                </tr>
+                <tr>
+                    <td><b>주소</b></td>
+                    <td colspan="4">서울시 서초구 반포대로 275 래미안퍼스티지 2동 2012호</td>
+                </tr>
+            </table>
+        </div>
+        <div class="aTable">
+            <h2>2. 학력사항</h2>
+            <table>
+                <tr>
+                    <th>학교명</th>
+                    <th>전공</th>
+                    <th>입학일자</th>
+                    <th>졸업일자</th>
+                    <th>졸업구분</th>
+                    <th>소재지</th>
+                </tr>
+                <tr>
+                    <td>파리10대학</td>
+                    <td>경제학</td>
+                    <td>2005.03.03</td>
+                    <td>2010.02.20</td>
+                    <td>
+                        <input type="radio" name="1stchk" value="졸업">졸업
+                        <input type="radio" name="1stchk" value="예정">예정
+                    </td>
+                    <td>프랑스</td>
+                </tr>
+                <tr>
+                    <td>서울대학교</td>
+                    <td>국사학</td>
+                    <td>2000.03.03</td>
+                    <td>2005.02.25</td>
+                    <td>
+                        <input type="radio" name="2ndchk" value="졸업">졸업
+                        <input type="radio" name="2ndchk" value="예정">예정
+                    </td>
+                    <td>대한민국</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="cTable">
+            <h2>3. 자격사항</h2>
+            <table>
+            <tr>
+                <th>자격증명</th>
+                <th>등급</th>
+                <th>취득일</th>
+                <th>발급기관</th>
+
+            </tr>
+            <tr>
+                <td>정보처리기사</td>
+                <td>1급</td>
+                <td>2008.01.20</td>
+                <td>한국산업인력관리공단</td>
+
+            </tr>
+            <tr>
+                <td>OCJP</td>
+                <td></td>
+                <td>2007.05.05</td>
+                <td>ORACLE</td>
+
+            </tr>
+        </table>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

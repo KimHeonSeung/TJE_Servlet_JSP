@@ -1,0 +1,14 @@
+/main.khs=khs.command.MainCommand
+/login.khs=khs.command.LoginCommand
+/logout.khs=khs.command.LogoutCommand
+/regist.khs=khs.command.RegistCommand
+/check_id.khs=khs.command.RegistIDCheckCommand
+/check_nick.khs=khs.command.RegistNickCheckCommand
+/board.khs=khs.command.Board_InfoCommand
+/simple_board.khs=khs.command.SimpleBoardCommand
+/detail_board.khs=khs.command.DetailBoardCommand
+/write_board.khs=khs.command.WriteBoardCommand
+/like.khs=khs.command.Like_InfoCommand
+/user_info.khs=khs.command.UserInfoCommand
+/user_update.khs=khs.command.UserUpdateCommand
+/update_result.khs=khs.command.UpdateResultCommand

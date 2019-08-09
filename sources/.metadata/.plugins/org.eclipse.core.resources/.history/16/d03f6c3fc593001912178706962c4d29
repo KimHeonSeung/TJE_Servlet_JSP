@@ -1,0 +1,29 @@
+package khs.service;
+
+import java.sql.*;
+import java.util.*;
+import khs.dao.*;
+import khs.model.*;
+
+public class Like_InfoService implements Service {
+	private Like_InfoDAO like_InfoDAO = new Like_InfoDAO();
+	
+	public HashMap<String, Object> service(HashMap<String, Object> values) {
+		HashMap<String, Object> result = new HashMap<>();
+		Connection conn = (Connection)values.get("conn");
+		String user_id = (String)values.get("user_id");
+		Integer article_num = (Integer)values.get("article_num");
+		
+		result.put("simpleBoard", like_InfoDAO.selectSimpleBoard(conn, board_id));
+		result.put("result", result.get("simpleBoard") != null);
+		
+		return result;
+	}
+}
+
+
+
+
+
+
+

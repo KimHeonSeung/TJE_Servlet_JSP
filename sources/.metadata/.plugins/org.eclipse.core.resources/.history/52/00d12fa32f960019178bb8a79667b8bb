@@ -1,0 +1,16 @@
+package khs.model;
+
+import java.util.*;
+import java.sql.*;
+import java.text.*;
+
+public class Comments {
+	
+	private int comment_id;
+	private String user_id;
+	private String user_nick;
+	private String content;
+	private Date write_time;
+	
+}
+	

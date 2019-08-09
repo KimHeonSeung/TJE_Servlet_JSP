@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>메뉴 구현</title>
+<script src="./js/jquery.js"></script>
+<script>
+ $(function(){
+	 
+	$(".button").on("click",function(){
+		$(this).css("box-shadow","none");
+	}); 
+	
+ });
+
+</script>
+
+<style type="text/css">
+.button {
+	border-radius : 40px 40px 40px 40px;
+	width : 150px;
+	height: 100px;
+	background-color : #80808063;
+	text-align: center;
+	font-size : 20px;
+	font-weight : bold;
+	display : inline-block;
+	box-shadow : 3px 3px 3px 3px black;
+	cursor : pointer;
+}
+
+</style>
+</head>
+<body>
+<div class="menu">
+	<input type="button" value="목록" class="button">
+	<input type="button" value="가입" class="button">
+	<input type="button" value="수정" class="button">
+	<input type="button" value="탈퇴" class="button">
+</div>
+
+</body>
+</html>

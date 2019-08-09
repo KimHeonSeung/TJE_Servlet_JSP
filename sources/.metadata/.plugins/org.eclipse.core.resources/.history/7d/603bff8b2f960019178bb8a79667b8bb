@@ -1,0 +1,12 @@
+package khs.model;
+
+import java.util.*;
+import java.sql.*;
+import java.text.*;
+
+public class Comments {
+	
+	
+	
+}
+	

@@ -1,0 +1,29 @@
+-- 1)
+select LAST_NAME, HIRE_DATE
+from EMPLOYEES
+where HIRE_DATE between '2003-01-01' and '2003-12-31';
+-- 2)
+select LAST_NAME
+from EMPLOYEES
+where lower(LAST_NAME) like '%a%' and lower(LAST_NAME) like'%e%';
+-- 3)
+select LAST_NAME, round(MONTHS_WORKED)
+from EMPLOYEES;
+-- 4)
+select JOB_ID, sum(SALARY)
+from EMPLOYEES
+where DEPARTMENT_ID = '20' or DEPARTMENT_ID='50' or DEPARTMENT_ID='80' or DEPARTMENT_ID='90'
+group by JOB_ID;
+
+select DEPARTMENT_ID, sum(SALARY)
+from EMPLOYEES
+where DEPARTMENT_ID = '20' or DEPARTMENT_ID='50' or DEPARTMENT_ID='80' or DEPARTMENT_ID='90'
+group by DEPARTMENT_ID
+order by DEPARTMENT_ID;
+-- 5)
+select LAST_NAME, E.DEPARTMENT_ID, DEPARTMENT_NAME
+from EMPLOYEES E inner join DEPARTMENTS D on E.DEPARTMENT_ID = D.DEPARTMENT_ID;
+-- 6)
+select LAST_NAME, SALARY
+from EMPLOYEES
+where MANAGER_ID=(select EMPLOYEE_ID from EMPLOYEES where LAST_NAME='Kochhar');
